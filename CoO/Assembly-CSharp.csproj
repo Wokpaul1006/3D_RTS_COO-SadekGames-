@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9B8EC0CE-C0A1-3551-087A-6FC985F143F5}</ProjectGuid>
+    <ProjectGuid>{C12AD225-9F3E-D30B-1BF8-8A44DC72425C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,31 +56,30 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Common\Script\Manager\MouseControlSC.cs" />
-    <Compile Include="Assets\Common\Script\Unit\NargarUnit\OiranMermaidSC.cs" />
-    <Compile Include="Assets\Menu\Script\NewGameSC.cs" />
-    <Compile Include="Assets\Lobby\Script\LobbyMN.cs" />
-    <Compile Include="Assets\Common\Script\Manager\BuyConsSC.cs" />
-    <Compile Include="Assets\Common\Script\Unit\UIPMUnit\TaurosCS.cs" />
-    <Compile Include="Assets\Common\Script\Unit\UIPMUnit\EngineerCS.cs" />
-    <Compile Include="Assets\Common\Script\Manager\Singleton.cs" />
-    <Compile Include="Assets\Menu\Script\LoadGameSC.cs" />
+    <Compile Include="Assets\00_Common\Script\Manager\MouseControlSC.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\NargarUnit\OiranMermaidSC.cs" />
+    <Compile Include="Assets\Menu\02_Script\NewGameSC.cs" />
+    <Compile Include="Assets\02_Lobby\02_Script\LobbyMN.cs" />
+    <Compile Include="Assets\00_Common\Script\Manager\BuyConsSC.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\TaurosCS.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\EngineerCS.cs" />
+    <Compile Include="Assets\00_Common\Script\Manager\Singleton.cs" />
     <Compile Include="Assets\InGame\Script\PlayerScript.cs" />
-    <Compile Include="Assets\Menu\Script\MainMenuController.cs" />
-    <Compile Include="Assets\Common\Script\Unit\BuyUnitManager.cs" />
-    <Compile Include="Assets\Common\Script\Unit\UIPMUnit\MarineCS.cs" />
+    <Compile Include="Assets\Menu\02_Script\MainMenuController.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\BuyUnitManager.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\MarineCS.cs" />
     <Compile Include="Assets\InGame\Script\InGameMN.cs" />
-    <Compile Include="Assets\Common\Script\Unit\UIPMUnit\TarantulasCS.cs" />
-    <Compile Include="Assets\ComCenSC.cs" />
-    <Compile Include="Assets\Common\Script\Unit\UIPMUnit\EliteTemplarCS.cs" />
-    <Compile Include="Assets\Common\Script\Unit\BaseUnit.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\TarantulasCS.cs" />
+    <Compile Include="Assets\InGame\ComCenSC.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\EliteTemplarCS.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\BaseUnit.cs" />
     <Compile Include="Assets\InGame\Script\CameraController.cs" />
-    <Compile Include="Assets\Campaign\UIPMGameplaySC.cs" />
-    <Compile Include="Assets\Menu\Script\OptionSC.cs" />
-    <Compile Include="Assets\Common\Script\Unit\UIPMUnit\CommandCenterSC.cs" />
-    <Compile Include="Assets\Common\Script\Unit\UIPMUnit\PaladinCS.cs" />
-    <Compile Include="Assets\Common\Script\Unit\Utility.cs" />
-    <Compile Include="Assets\Loading\Script\LoadingSC.cs" />
+    <Compile Include="Assets\InGame\Campaign\UIPMGameplaySC.cs" />
+    <Compile Include="Assets\Menu\02_Script\OptionSC.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\CommandCenterSC.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\PaladinCS.cs" />
+    <Compile Include="Assets\00_Common\Script\Unit\Utility.cs" />
+    <Compile Include="Assets\01_Loading\01_Script\LoadingSC.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -328,9 +327,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>D:\SettingFolder\Unity\2021.3.21f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>D:\SettingFolder\Unity\2021.3.21f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -748,10 +744,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{086F18E5-A2A6-8AA8-62DA-964A7C81F4BB}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

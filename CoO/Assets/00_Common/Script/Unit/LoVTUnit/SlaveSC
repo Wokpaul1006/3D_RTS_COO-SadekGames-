@@ -1,0 +1,41 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SlaveSC : SupportUnit
+{
+    //This unit is light infantry, play a role that builder structure, capture bulding, cant attack any type of enemy
+    [SerializeField] Rigidbody body;
+    private float TakenDmg;
+    public GameObject target;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        UnitNames = "Slave";
+        UnitTypes = "None";
+        UnitTags = "LightInf";
+        UnitPurpose = "None";
+        Tier = 1;
+
+        BaseHP = 100;
+        BasePhyDmg = 0;
+        BaseMagDmg = 0;
+        BaseSp = 5;
+        AtkRange = 0;
+        Sight = 10;
+
+        isIdle = true;
+        isUseAbility = true;
+        isFlee = false;
+        isAtk = false;
+    }
+
+    // Update is called once per frame
+    void BuildHospital(){
+        //Start Animation build
+        //Generate "Building 2x2 animation clip"
+        //Instiate Hospital after countdown, countdount = hospital build time  
+    }
+}
