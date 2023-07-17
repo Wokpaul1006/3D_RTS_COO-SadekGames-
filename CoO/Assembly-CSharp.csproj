@@ -56,29 +56,29 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\00_Common\Script\Manager\MouseControlSC.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\NargarUnit\OiranMermaidSC.cs" />
-    <Compile Include="Assets\Menu\02_Script\NewGameSC.cs" />
-    <Compile Include="Assets\02_Lobby\02_Script\LobbyMN.cs" />
-    <Compile Include="Assets\00_Common\Script\Manager\BuyConsSC.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\TaurosCS.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\EngineerCS.cs" />
-    <Compile Include="Assets\00_Common\Script\Manager\Singleton.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Manager\MouseControlSC.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\NargarUnit\OiranMermaidSC.cs" />
+    <Compile Include="Assets\02_Menu\02_Script\NewGameSC.cs" />
+    <Compile Include="Assets\03_Lobby\02_Script\LobbyMN.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Manager\BuyConsSC.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\TaurosCS.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\EngineerCS.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Manager\Singleton.cs" />
     <Compile Include="Assets\InGame\Script\PlayerScript.cs" />
-    <Compile Include="Assets\Menu\02_Script\MainMenuController.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\BuyUnitManager.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\MarineCS.cs" />
+    <Compile Include="Assets\02_Menu\02_Script\MainMenuController.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\BuyUnitManager.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\MarineCS.cs" />
     <Compile Include="Assets\InGame\Script\InGameMN.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\TarantulasCS.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\TarantulasCS.cs" />
     <Compile Include="Assets\InGame\ComCenSC.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\EliteTemplarCS.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\BaseUnit.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\EliteTemplarCS.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\BaseUnit.cs" />
     <Compile Include="Assets\InGame\Script\CameraController.cs" />
     <Compile Include="Assets\InGame\Campaign\UIPMGameplaySC.cs" />
-    <Compile Include="Assets\Menu\02_Script\OptionSC.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\CommandCenterSC.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\UIPMUnit\PaladinCS.cs" />
-    <Compile Include="Assets\00_Common\Script\Unit\Utility.cs" />
+    <Compile Include="Assets\02_Menu\02_Script\OptionSC.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\CommandCenterSC.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\PaladinCS.cs" />
+    <Compile Include="Assets\00_Common\00_Script\Unit\Utility.cs" />
     <Compile Include="Assets\01_Loading\01_Script\LoadingSC.cs" />
   </ItemGroup>
   <ItemGroup>

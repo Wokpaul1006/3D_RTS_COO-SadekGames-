@@ -30,7 +30,7 @@ public class LoadingSC : MonoBehaviour
                 LoadingCountTime = 0;
             }
         }
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("02_MainMenuScene");
     }
 
     private void AnimatedLoadingText()
