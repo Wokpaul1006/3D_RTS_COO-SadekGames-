@@ -13,62 +13,69 @@ public class UnitInfoSC : MonoBehaviour
     #region Callback Zone
     public string GetUnitName(int unitID, int unitFaction)
     {
+        unitName = "";
+
         if (unitFaction == 1)
         {
-            //This des for UIPM unit
             switch (unitID)
             {
                 case 0:
-                    ReturnNullInfo(); break;
-                case 1:
-                    MarineDes(); break;
-                case 2:
                     ReturnNullInfo();
                     break;
-                case 3:
-                    MarineDes(); break;
-                case 4:
+                case 1:
+                    MarineDes();
+                    break;
+                case 2:
                     RocketDes();
                     break;
-                case 5:
-                    EngineerDes(); break;
-                case 6:
+                case 3:
+                    EngineerDes();
+                    break;
+                case 4:
                     GhostDes();
                     break;
-                case 7:
-                    PaladinDes(); break;
-                case 8:
+                case 5:
+                    PaladinDes();
+                    break;
+                case 6:
                     TemplarsDes();
                     break;
-                case 9:
-                    TroncycleDes(); break;
-                case 10:
+                case 7:
+                    TroncycleDes();
+                    break;
+                case 8:
                     SpiderDes();
                     break;
-                case 11:
-                    TaurosDes(); break;
-                case 12:
+                case 9:
+                    TaurosDes();
+                    break;
+                case 10:
                     ArmargeddonDes();
                     break;
-                case 13:
-                    QuadamoDes(); break;
-                case 14:
+                case 11:
+                    QuadamoDes();
+                    break;
+                case 12:
                     SkyhammerDes();
                     break;
+                case 13:
+                    SkylynxDes();
+                    break;
+                case 14:
+                    CondorDes();
+                    break;
                 case 15:
-                    SkylynxDes(); break;
-                case 16:
-                    CondorDes(); break;
-                case 17:
                     AC130Des();
                     break;
-                case 18:
-                    YamatoDes(); break;
-                case 19:
+                case 16:
+                    YamatoDes();
+                    break;
+                case 17:
                     TransportDes();
                     break;
-                case 20:
-                    YeagerDes(); break;
+                case 18:
+                    YeagerDes();
+                    break;
             }
         }
         else if (unitFaction == 2)
@@ -174,62 +181,70 @@ public class UnitInfoSC : MonoBehaviour
     }
     public string GetUnitDes(int unitID, int unitFaction) 
     {
+        unitDes = "";
+
         if (unitFaction == 1)
         {
             //This des for UIPM unit
             switch (unitID)
             {
                 case 0:
-                    ReturnNullInfo(); break;
-                case 1:
-                    MarineDes(); break;
-                case 2:
-                    ReturnNullInfo();
+                    ReturnNullInfo(); 
                     break;
-                case 3:
-                    MarineDes(); break;
-                case 4:
+                case 1:
+                    MarineDes(); 
+                    break;
+                case 2:
                     RocketDes();
                     break;
-                case 5:
-                    EngineerDes(); break;
-                case 6:
+                case 3:
+                    EngineerDes(); 
+                    break;
+                case 4:
                     GhostDes();
                     break;
-                case 7:
-                    PaladinDes(); break;
-                case 8:
-                    TemplarsDes();
+                case 5:
+                    PaladinDes();   
                     break;
-                case 9:
-                    TroncycleDes(); break;
-                case 10:
+                case 6:
+                    TemplarsDes(); 
+                    break;
+                case 7:
+                    TroncycleDes();
+                    break;
+                case 8:
                     SpiderDes();
                     break;
-                case 11:
-                    TaurosDes(); break;
-                case 12:
+                case 9:
+                    TaurosDes(); 
+                    break;
+                case 10:
                     ArmargeddonDes();
                     break;
-                case 13:
-                    QuadamoDes(); break;
-                case 14:
+                case 11:
+                    QuadamoDes(); 
+                    break;
+                case 12:
                     SkyhammerDes();
                     break;
+                case 13:
+                    SkylynxDes(); 
+                    break;
+                case 14:
+                    CondorDes(); 
+                    break;
                 case 15:
-                    SkylynxDes(); break;
-                case 16:
-                    CondorDes(); break;
-                case 17:
                     AC130Des();
                     break;
-                case 18:
-                    YamatoDes(); break;
-                case 19:
+                case 16:
+                    YamatoDes(); 
+                    break;
+                case 17:
                     TransportDes();
                     break;
-                case 20:
-                    YeagerDes(); break;
+                case 18:
+                    YeagerDes(); 
+                    break;
             }
         }
         else if (unitFaction == 2)
@@ -333,7 +348,6 @@ public class UnitInfoSC : MonoBehaviour
         }
         return unitDestoShow = unitDes;
     }
-
     private void ReturnNullInfo()
     {
         unitDes = null;
@@ -452,13 +466,13 @@ public class UnitInfoSC : MonoBehaviour
     #region LoVT Unit Info
     private void GrutDes()
     {
-        unitName = "Org Grunts";
+        unitName = "BRUTES GRUNTS";
         unitDes = "Angry, combative, strong, muscular. Those adjective is all talk about Brutes Grunt, a common name used for all Orgarnians joining the force of Legions as frontline ground units. They were a species of chaos exist on Ckaus planet. Separate, fighting each other for fun and conquering each other's properties until Princess of The Void came andturning them into a united species by force and torture. Although they still fight each other, at least, they don't beat their opponent to death as in the past. After conquered, Princess of the void still let them fight as their will by let them join frontline force or let them challenge each other but kill other Organian member is banned, as the law, anyone who kill other Organian will be brought to the Void, leave them there to dead or just being tear apart by The Void's hunter such as Kazik. There was four types of Organians now so every platoon of Brutes Grunt had four members in order: Green - Red - Pale - Black to serve multiple roles inside a platoon. The most strong and biggest is Green ones, with massive body to compare with the three remain, the Green one will serve as a shield for the platoon, Red one is the most muscular, although they are smaller the Green one, they are more stronger and more muscular, they are main strike force for the platoon, Pale one is carrier, who has responsibility to carrying team's equipment such as weapon and the Black one is the most intelligent Orgainan in a platoon, who will decide how team will fight in combat or take directly orders from battlefield commanders.";
     }
     private void TrollDes()
     {
-        unitName = "AIRDOWN TROLL";
-        unitDes = "UPDATE SOON";
+        unitName = "ARMORHENTER TROLL";
+        unitDes = "Originally, Troll is actually an Orc. Following the long periods of Orc’s growing time, the concept of “Troll” was formed and became the name of a specific species in the Universe. Sharing the same living space with Orcs on [...] planet. Long ago before, after Creation of World, a small group of Green Orc choose to learn magic and use it as weapon rather than muscular like what Orcs does, this cause the Orcs call Trolls is coward one and follow the time, Orcs throw hatred on Trolls. Because they choose to use magical rather muscular-like Orc, Troll is not thick and muscular like Orc does and due, they are tiny to compare with Orc, although some races of Troll are bigger than Orc, they are fluffy. Unlike Orc whose uses blunt melee weapons, Trolls prefer ranged weapons with enchanted magic on it, this “magic enchanted range weapon” causes them to be more accurate and more destructible when hit by a biological target. Orc being separated as many clans, Trolls is an united social, leader of the social call themself the Trollord, who incharge of manage the whole socials and just like Orc, the strongest Troll is Trollord, every Troll want to become Trollord, they just ask for a competition.";
     }
     private void ParasiteDes()
     {
@@ -551,7 +565,7 @@ public class UnitInfoSC : MonoBehaviour
     private void FlyfisherDes()
     {
         unitName = "FLYFISHER";
-        unitDes = "UPDATE SOON";
+        unitDes = "Mermaids who fly through battlefields like birds. To provide anti aircraft fire power, this group of female soldiers are ones who want to serve as a militant but do not match the requirement for Shireens role. ";
     }
     private void ProbesDes()
     {

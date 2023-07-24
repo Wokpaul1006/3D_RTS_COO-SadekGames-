@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.TextCore;
 using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
@@ -18,6 +21,8 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] GameObject infoLoVTPnl;
     [SerializeField] GameObject infoNEAPnl;
 
+    [SerializeField] PlayerDataSC ingameSC;
+
     [SerializeField] List<Sprite> spriteUIPM = new List<Sprite>();
     [SerializeField] List<Sprite> spriteLoVT= new List<Sprite>();
     [SerializeField] List<Sprite> spriteNEA = new List<Sprite>();
@@ -28,10 +33,20 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] Dropdown factionDrop;
     [SerializeField] Image unitImg;
 
+    [Header("Skirimsh's Objects")]
+    [SerializeField] Dropdown mapSizeDrop;
+
     [Header("Variables")]
-    private int unitIDChoose;
-    private int unitFaction;
-    private int unitSpriteIndex;
+    private int unitIDChoose;       //Information panel element
+    private int unitFaction;        //Information panel element
+    private int unitSpriteIndex;    //Information panel element
+
+    private int campFactionID;      //Campaign panel element
+
+    private int skirmishFoeFactionID;       //Skirmish panel element
+    private int skirmishPlayerFactionID;    //Skirmish panel element
+    private int mapID;  //Skirmish panel element
+    private int mapSize;    //Skirmish panel element
 
     [HideInInspector]
     DateTime now =  DateTime.Now;
@@ -53,6 +68,7 @@ public class MainMenuController : MonoBehaviour
             mainPnl.SetActive(true);
         }
         unitIDChoose = 0;
+        campFactionID = 0;
     }
 
     #region Info Panel function
@@ -477,8 +493,59 @@ public class MainMenuController : MonoBehaviour
     #region Misc function
     private void GetRealTime()
     {
-        realTimeTxt.text = now.ToString();
+        realTimeTxt.text = now.Hour.ToString() + ":" + now.Minute.ToString() + ":" + now.Second.ToString();
     }
     public void OnQuitGame() => Application.Quit(0);
+
+    //Call from Capaign
+    public void OnCampUIMP() => campFactionID = 0;
+    public void OnCampLoVT() => campFactionID = 2;
+    public void OnCampNEA() => campFactionID = 3;
+    public void CampToWarfield() => ToWarfield(campFactionID, 1, 4*4);
+    //End call from Campaign
+
+    //Call from Skirmish
+    public void PlayerPickUIPM() => skirmishFoeFactionID = 1;
+    public void PlayerPickLoVT() => skirmishFoeFactionID = 3;
+    public void PlayerPickNEA() => skirmishFoeFactionID = 3;
+    public void PlayerPickRandom() => skirmishFoeFactionID = UnityEngine.Random.Range(1, 3);
+    public void PlayerPickMapSize()
+    {
+        switch (mapSizeDrop.value)
+        {
+            case 0:
+                mapSize = 3 * 3;
+                break;
+            case 1:
+                mapSize = 4 * 4;
+                break;
+            case 2:
+                mapSize = 5 * 5;
+                break;
+            case 3:
+                mapSize = 6 * 6;
+                break;
+            case 4:
+                mapSize = 7 * 7;
+                break;
+            case 5:
+                mapSize = 8 * 8;
+                break;
+        }
+    }
+    public void PlayerPickFoeUIPM() => skirmishFoeFactionID = 1;
+    public void PlayerPickFoeLoVT() => skirmishFoeFactionID = 2;
+    public void PlayerPickFoeNEA() => skirmishFoeFactionID = 3;
+    public void PlayerPickFoeRand() => skirmishFoeFactionID = UnityEngine.Random.Range(1, 3);
+    public void SkirmishToWarfield() => ToWarfield(skirmishPlayerFactionID, skirmishFoeFactionID, mapSize);
+    //End call form Skirmish
+
+    public void Tutorial() => ToWarfield(1, 1, 3*3);
+    private void ToWarfield(int _playerfaction, int _foeFaction, int mapSzie)
+    {
+        print("in to Warfiled Funct");
+        ingameSC.SetSkirmishData(_playerfaction, _foeFaction, mapSzie);
+        SceneManager.LoadScene("03_InGameScene");
+    }
     #endregion
 }
