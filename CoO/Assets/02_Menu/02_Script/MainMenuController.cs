@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TextCore;
@@ -425,7 +424,7 @@ public class MainMenuController : MonoBehaviour
         ShowUnitInfo();
         OnChangeSprite(unitFaction, unitIDChoose);
     }
-    public void Takopod()
+    public void OnTakopod()
     {
         unitFaction = 3;
         unitIDChoose = 8;
