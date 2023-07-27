@@ -68,6 +68,8 @@ public class MainMenuController : MonoBehaviour
         }
         unitIDChoose = 0;
         campFactionID = 0;
+
+        ingameSC = GameObject.Find("PlayerDataMN").GetComponent<PlayerDataSC>();
     }
 
     #region Info Panel function
@@ -504,10 +506,10 @@ public class MainMenuController : MonoBehaviour
     //End call from Campaign
 
     //Call from Skirmish
-    public void PlayerPickUIPM() => skirmishFoeFactionID = 1;
-    public void PlayerPickLoVT() => skirmishFoeFactionID = 3;
-    public void PlayerPickNEA() => skirmishFoeFactionID = 3;
-    public void PlayerPickRandom() => skirmishFoeFactionID = UnityEngine.Random.Range(1, 3);
+    public void PlayerPickUIPM() => skirmishPlayerFactionID = 1;
+    public void PlayerPickLoVT() => skirmishPlayerFactionID = 3;
+    public void PlayerPickNEA() => skirmishPlayerFactionID = 3;
+    public void PlayerPickRandom() => skirmishPlayerFactionID = UnityEngine.Random.Range(1, 3);
     public void PlayerPickMapSize()
     {
         switch (mapSizeDrop.value)

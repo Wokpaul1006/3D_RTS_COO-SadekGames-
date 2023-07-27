@@ -8,7 +8,7 @@ public class InGameMN : MonoBehaviour
 
     [Header("Objcet Definition")]
     [SerializeField] GameObject plane;
-    [SerializeField] GameObject commandBuilding;
+    [SerializeField] List<GameObject> commandBuilding = new List<GameObject>();
     [SerializeField] GameObject cam;
     [SerializeField] Transform parent;
 
@@ -30,16 +30,15 @@ public class InGameMN : MonoBehaviour
 
     private void Start()
     {
+        playerDataSC = GameObject.Find("PlayerDataMN").GetComponent<PlayerDataSC>();
+
         OnStartGame();
     }
     private void OnStartGame() 
     {
         GetInfoForBattle();
         SpawnMap();
-        SpawnStructure();
-        CameraPointToComCen();
-
-        ///playerDataSC = GameObject.Find("PlayerDataMN").GetComponent<PlayerDataSC>();
+        SpawnCommandStructure(_faction);
     }
 
     private void SpawnMap()
@@ -48,7 +47,7 @@ public class InGameMN : MonoBehaviour
         for(int i = 0; i < _mapSize/3; i++)
         {
             SpawnMapHorizontal(_mapPosZ);
-            _mapPosZ += 10;
+            _mapPosZ -= 10;
         }
     }
     private void SpawnMapHorizontal(float z)
@@ -57,16 +56,22 @@ public class InGameMN : MonoBehaviour
         for(int i = 0; i < _mapSize/3; i++) 
         {
             Instantiate(plane,new Vector3(_mapPosX, 0, z), Quaternion.identity);
-            _mapPosX += 10f;
+            _mapPosX -= 10f;
         }
     }
-    private void SpawnStructure()
+    private void SpawnCommandStructure(int factionID)
     {
-        Instantiate(commandBuilding, new Vector3(0, 0, 0), Quaternion.identity);
-    }
-
-    private void CameraPointToComCen()
-    {
-        cam.transform.position = commandBuilding.transform.position;
+        switch (factionID) 
+        {
+            case 0:
+                Instantiate(commandBuilding[0], new Vector3(0, 1, 0), Quaternion.identity); //Spawn ComCen
+                break;
+            case 1:
+                Instantiate(commandBuilding[1], new Vector3(0, 1, 0), Quaternion.identity); //Spawm Hivemind
+                break;
+            case 2:
+                Instantiate(commandBuilding[2], new Vector3(0, 1, 0), Quaternion.identity); //Spaw Shogunate
+                break;
+        }
     }
 }

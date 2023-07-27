@@ -66,6 +66,7 @@
     <Compile Include="Assets\02_Menu\02_Script\UnitInfoSC.cs" />
     <Compile Include="Assets\03_InGame\04_Script\PlayerScript.cs" />
     <Compile Include="Assets\02_Menu\02_Script\MainMenuController.cs" />
+    <Compile Include="Assets\00_Common\PlayerDataSC.cs" />
     <Compile Include="Assets\00_Common\00_Script\Unit\BuyUnitManager.cs" />
     <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\MarineCS.cs" />
     <Compile Include="Assets\03_InGame\04_Script\InGameMN.cs" />
@@ -79,7 +80,8 @@
     <Compile Include="Assets\00_Common\00_Script\Unit\UIPMUnit\PaladinCS.cs" />
     <Compile Include="Assets\00_Common\00_Script\Unit\Utility.cs" />
     <Compile Include="Assets\01_Loading\01_Script\LoadingSC.cs" />
-    <Compile Include="Assets\00_Common\PlayerDataSC.cs" />
+    <Compile Include="Assets\00_Common\DontDestroy.cs" />
+    <Compile Include="Assets\03_InGame\04_Script\ComCenSC.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

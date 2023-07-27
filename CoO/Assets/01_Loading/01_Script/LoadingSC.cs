@@ -21,7 +21,7 @@ public class LoadingSC : MonoBehaviour
         {
             LoadingCountTime++;
             _loadSpeed = Random.Range(0, 10);
-            _progressBar.value = Mathf.MoveTowards(_progressBar.value, _target, _loadSpeed * Time.deltaTime);
+            _progressBar.value = Mathf.MoveTowards(_progressBar.value, _target, _loadSpeed * Time.deltaTime *10);
             yield return null;
 
             if (LoadingCountTime == 100)

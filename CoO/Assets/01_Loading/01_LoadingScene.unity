@@ -858,23 +858,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1160466358}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2306792466826635239, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2306792466826635239, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 29.739586
       objectReference: {fileID: 0}
     - target: {fileID: 2306792466826635239, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.1340568
       objectReference: {fileID: 0}
     - target: {fileID: 2306792466826635239, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 30.70946
       objectReference: {fileID: 0}
     - target: {fileID: 2306792466826635239, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -908,13 +908,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDataMN
       objectReference: {fileID: 0}
+    - target: {fileID: 5685745647312424388, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
+      propertyPath: m_TagString
+      value: PlayerData
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618186265972000659, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
+      propertyPath: isDestroyOnLoad
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
---- !u!4 &1049731963 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2306792466826635239, guid: c6d423b63b1197c4dbf80208beb8aaec, type: 3}
-  m_PrefabInstance: {fileID: 1049731962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1160466357
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +949,6 @@ Transform:
   - {fileID: 15821775}
   - {fileID: 619918749}
   - {fileID: 1195935227}
-  - {fileID: 1049731963}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
