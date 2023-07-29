@@ -13,10 +13,12 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             Instance = GetComponent<T>();
             if (!isDestroyOnLoad)
                 DontDestroyOnLoad(Instance);
+            print("dont destroy");
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
+            print("destroyed");
         }
     }
 }
